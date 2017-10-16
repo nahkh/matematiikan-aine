@@ -1,0 +1,10 @@
+Graafin automorfismiryhmä.
+Graafin automorfismi on kaarirelaation säilyttävä bijektiivinen kuvaus sen solmujen joukossa. Nämä kuvaukset ovat graafin (itse)symmetriat, eli automorfismiryhmät. Aineessa selvitetään joidenkin yksinkertaisten graafien automorfismiryhmät ja esitellään Fruchtin teoreema: kaikki äärelliset ryhmät ovat graafien automorfismiryhmiä.
+
+graafiteorian olen itse oppinut aikoinani lähteestä http://users.utu.fi/harju/graphtheory/graphs2018.htm
+äärellisten ryhmien teoriasta löydät varmasti helposti kirjoja ja jos Cayley'n teoreema on hallussa niin osaat sitä jo varmaan riittävästi
+eli olin varmaan ajatellut niin että tuossa voisi olla vähän omaa tutkimusta jossa esim. selvitellään mikä on joidenkin yksinkertaisten graafien automorfismiryhmä
+esim. sykligraafi, puu ja viivagraafi (tyyliin 1-2-3-4-5)
+suoraan määritelmistä
+ja sitten määrittelisi graafin automorfismiryhmän (löytyy monista graafiteorian kirjoista, mutta ei teron monisteesta uskoakseni).
+ja vähintään sanoisi tarkasti mitä fruchtin teoreema sanoo, tai jos aine on tämän jälkeen liian lyhyt niin todistus/todistusidea sille
