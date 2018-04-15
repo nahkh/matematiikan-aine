@@ -137,7 +137,7 @@ joten $f^{-1} \in G_S$.
 \begin{teor}
 Pari $(G_S, \circ)$ on ryhmä.
 \begin{proof}
-Lemman \ref{lemma:binaarirelaatio} mukaan $\circ$ on $G_S$:n binäärirelaatio. Assosiatiivisuus on selvä kuvausten komposition assosiatiivisuuden perusteella. Lemman \ref{lemma:identiteetti} mukaan jokainen $G_S$ sisältää identiteettikuvauksen $id$, joka on ryhmän neutraalialkio. Lemman \ref{lemma:kaanteiskuvaus} mukaan jokaisella automorfismilla $f$ on käänteiskuvaus $f^{-1} \in G_S$.
+Lemman \ref{lemma:binaarirelaatio} mukaan $\circ$ on $G_S$:n binäärirelaatio. Assosiatiivisuus on selvä kuvausten komposition assosiatiivisuuden perusteella. Lemman \ref{lemma:identiteetti} mukaan jokainen $G_S$ sisältää identiteettikuvauksen $id$, joka on ryhmän neutraalialkio. Lemman \ref{lemma:kaanteiskuvaus} mukaan jokaisella automorfismilla $f$ on vasta-alkio $f^{-1} \in G_S$ siten, että $f \circ f^{-1} = id$.
 \begin{center}
 \begin{math}
 \end{math}
@@ -153,22 +153,73 @@ Tämä nähdään helposti vastaesimerkin kautta. Tarkastellaan esimerkin \ref{e
 \end{huom}
 
 \begin{example}
-Esimerkin \ref{ex:d4} mukaisen graafin symmetriaryhmä $G_S$ on isomorfinen diedriryhmän $D_4$ kanssa. Tämä nähdään helposti tarkastelemalla $G_S$:n ryhmätaulua. Otetaan $G_S$:n alkioille käyttöön seuraavat merkinnät: $\alpha_{n, i} \in G_S, 0 \geq n \lt4, i \in \{0, 1\} $, siten että $\alpha_{n, i}$
+Esimerkin \ref{ex:d4} mukaisen graafin symmetriaryhmä $G_S$ on isomorfinen diedriryhmän $D_4$ kanssa. Yleisemmin $n$:n alkion rengasgraafi on isomorfinen diedriryhmän $D_n$ kanssa. Tämä nähdään helposti tarkastelemalla $G_S$:n ryhmätaulua. Otetaan $G_S$:n alkioille käyttöön seuraavat merkinnät: $\alpha_{i, j} \in G_S, 0 <0 i \leq n, j \in \{0, 1\}$ , siten että $\alpha_{i, j}$ kuvaa alkion $v_1$ alkioksi $v_i$ ja kääntää rengasgraafin suunnan mikäli $j = 1$. Tällä tavoin määriteltyjen isomorfismien lisäksi $G_S$:llä ei ole muita isomorfismeja.
 
-Yleisemmin $n$:n alkion rengasgraafien symmetriaryhmä on isomorfinen diedriryhmän $D_n$ kanssa.
+Näitä merkintöjä käyttäen $G_S$:n symmeriaryhmän ryhmätaulu on seuraavanlainen tapauksessa $n=4$:
+
+\begin{center}
+\begin{tabular} {l | l l l l l l l l}
+	                & $\alpha_{1, 0}$ & $\alpha_{2, 0}$ & $\alpha_{3, 0}$ & $\alpha_{4, 0}$ & $\alpha_{1, 1}$ & $\alpha_{2, 1}$ & $\alpha_{3, 1}$ & $\alpha_{4, 1}$ \\
+\hline
+$\alpha_{1, 0}$ & $\alpha_{1, 0}$ & $\alpha_{2, 0}$ & $\alpha_{3, 0}$ & $\alpha_{4, 0}$ & $\alpha_{1, 1}$ & $\alpha_{2, 1}$ & $\alpha_{3, 1}$ & $\alpha_{4, 1}$ \\
+$\alpha_{2, 0}$ & $\alpha_{2, 0}$ & $\alpha_{3, 0}$ & $\alpha_{4, 0}$ & $\alpha_{1, 0}$ & $\alpha_{2, 1}$ & $\alpha_{3, 1}$ & $\alpha_{4, 1}$ & $\alpha_{1, 1}$ \\
+$\alpha_{3, 0}$ & $\alpha_{3, 0}$ & $\alpha_{4, 0}$ & $\alpha_{1, 0}$ & $\alpha_{2, 0}$ & $\alpha_{3, 1}$ & $\alpha_{4, 1}$ & $\alpha_{1, 1}$ & $\alpha_{2, 1}$ \\
+$\alpha_{4, 0}$ & $\alpha_{4, 0}$ & $\alpha_{1, 0}$ & $\alpha_{2, 0}$ & $\alpha_{3, 0}$ & $\alpha_{4, 1}$ & $\alpha_{1, 1}$ & $\alpha_{2, 1}$ & $\alpha_{3, 1}$ \\
+$\alpha_{1, 1}$ & $\alpha_{1, 1}$ & $\alpha_{4, 1}$ & $\alpha_{3, 1}$ & $\alpha_{2, 1}$ & $\alpha_{1, 0}$ & $\alpha_{4, 0}$ & $\alpha_{3, 0}$ & $\alpha_{2, 0}$ \\
+$\alpha_{2, 1}$ & $\alpha_{2, 1}$ & $\alpha_{1, 1}$ & $\alpha_{4, 1}$ & $\alpha_{1, 1}$ & $\alpha_{2, 0}$ & $\alpha_{1, 0}$ & $\alpha_{4, 0}$ & $\alpha_{1, 0}$ \\
+$\alpha_{3, 1}$ & $\alpha_{3, 1}$ & $\alpha_{2, 1}$ & $\alpha_{1, 1}$ & $\alpha_{4, 1}$ & $\alpha_{3, 0}$ & $\alpha_{2, 0}$ & $\alpha_{1, 0}$ & $\alpha_{4, 0}$ \\
+$\alpha_{4, 1}$ & $\alpha_{4, 1}$ & $\alpha_{3, 1}$ & $\alpha_{2, 1}$ & $\alpha_{3, 1}$ & $\alpha_{4, 0}$ & $\alpha_{3, 0}$ & $\alpha_{2, 0}$ & $\alpha_{3, 0}$ \\
+\end{tabular}
+\end{center}
+
+
 \end{example}
 
 \begin{example}
-%TBW
-Suoran graafin symmetriaryhmä on $C_2$
+Suoran graafin symmetriaryhmä on $C_2$.
+
+\begin{center}
+\begin{tikzpicture} [auto, node distance=3cm, every loop/.style={},
+                    thick,solmu/.style={circle,draw,font=\sffamily\Large\bfseries}]
+
+\node[solmu] (1) {$v_1$};
+\node[solmu] (2) [right of=1] {$v_2$};
+\node[solmu] (3) [right of=2] {$v_3$};
+\node[solmu] (4) [right of=3] {$v_4$};
+
+ \path[every node/.style={font=\sffamily\small}]
+    (1) edge node[left] {} (2)
+    (2) edge node[left] {} (3)
+    (3) edge node[left] {} (4);
+\end{tikzpicture}
+\end{center}
+
+Suoran graafin päädyissä olevilla alkioiden aste on $1$, ja kaikkien muiden alkoiden aste on $2$. Tästä seuraa se, että graafin päätyalkioit voidaan kuvata vain päätyalkoihin, sillä isomorfismit säilyttävät alkioiden asteen. Yhden päätyalkion kuvan määrääminen riittää määräämään koko graafin kuvan, joten mahdollisia kuvauksia on vain kaksi: $id$ ja kuvaus $f$, joka vaihtaa päätyalkioit keskenään. Koska $f \circ f = id$, graafin automorfismiryhmä on $C_2$
+
 \end{example}
 
 \begin{example}
-%TBW
-Puugraafin symmetriaryhmä on $C_2$
+Hamming-graafi on graafi, jonka alkiot vastaavat $n$:n merkin pituisia binäärijonoja. Kahden alkion välillä on kaari mikäli alkioita vastaavat binäärijonot poikkeavat yhdellä merkillä. Hamming-graafin voidaan ajatella kuvaavan n-ulotteisen hyperkuution kulmia.
+
+Olkoon $H$ hamming-graafi ja $f$ sen automorfismi. Olkoon $u \in \mathbb{Z}_2^n$ ja $v = f(u)$. Koska jokainen $u$:n naapuri kuvatuu $v$:n naapuriksi, yhden merkin muuttaminen $u$:ssa muuttaa yhden merkin $v$:ssä. Toisaalta koska sekä $u$:n että $v$:n naapurustossa on $n$ alkiota, $f$ kuvaa $i$:nnen merkin muutoksen $\alpha(i)$:nnen merkin muutokseksi $u$:n naapurustossa, missä $\alpha$ on permutaatio joukossa $\mathbb{Z}_n$. 
+
+Olkoon $u_1$, $u_2$ $u$:n naapureita, ja $u'$ $u_1$:n ja $u_2$:n yhteinen naapuri $u \neq u''$. Käytetään merkintöjä $v_1$, $v_2$, $v'$ näiden kuvista. Alkiot $v_1$ ja $v'$ eroavat toisistaan yhdellä merkillä (jonka täytyy olla eri merkki kuin $v_1$:n ja $v$:n välillä), ja koska alkiot $v_2$ ja $v'$ eroavat myös toisistaan yhdellä merkillä tulee $v_1$:n ja $v'$:n välisen eron olla sama kuin $v$:n ja $v_2$:n. Tästä seuraa se, että permutaatio $\alpha$ on voimassa koko automorfismissa $f$. 
+
+Automorfismista $f$ ja sen merkkipermutaatiosta $\alpha$ saadaan kuvaus \\${h: G_S \rightarrow S_n}$. Kuvaus $h$ on selvästi homomorfismi, sillä yhdistetyt automorfismit yhdistävät myös merkkipermutaatiot. Tämän homorfismin kerneli koostuu kaikista automorfismeista, jotka eivät permutoi merkkejä, tarkoittaen että mikäli alkiot $u$ ja $v$ poikkeavat $i$:nnessä merkissä, myös niiden kuvat $u'$ ja $v'$ poikkeavat $i$:nnessä merkissä. Tällaiset automorfismit joko vaihtavat merkin annetulla paikalla tai eivät. Ne muodostavat siis ryhmän $C_2^n$. Toisaalta ryhmä $S_n$ muodostaa myös $G_S$:n aliryhmän, sillä pelkät merkkipermutaatiot ovat myös automorfismeja. Koska $S_n$ ei muuta merkkejä, ja $C_n^2$ ei permutoi merkkien paikkoja, $S_n \cap C_2^n = \{ 1 \}$. Koska $C_2^n$ on $h$:n kerneli, $C_2^n \trianglelefteq G_S$, joten $G = C_2^n \rtimes S_n$.
+
 \end{example}
+
+\newpage
 
 \section{Fruchtin teoreema}
-%TBW
+
+\begin{teor}
+Olkoon $R$ äärellinen ryhmä. Silloin on olemassa äärellinen graafi $G$ siten, että graafin $G$ automorfismiryhmä on isomorfinen $R$:n kanssa.
+\begin{proof}
+Tarkastellaan $R$:n Caleyn graafia.
+TBW
+\end{proof}
+\end{teor}
+
 
 \end{document}
