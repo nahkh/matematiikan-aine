@@ -387,7 +387,7 @@ $1_i \in \mathbb{Z}_2^n$ missä $1_i$:n $i$:s merkki on 1, muut 0.\\
 $\bar{0} \in \mathbb{Z}_2^n$ missä kaikki merkit ovat 0.
 \end{tabular}
 \end{center}
-Selvästi $ \forall u \in \mathbb{Z}_2^n: u + u = \hat{0}$.
+Selvästi $ \forall u \in \mathbb{Z}_2^n: u + u = \bar{0}$.
 
 Olkoot $G$ hamming-graafi ja $f$ sen automorfismi. Olkoot $u \in G$ ja $v = f(u)$. Koska jokainen solmun $u$ naapuri kuvatuu solmun $v$ naapuriksi, yhden merkin muuttaminen alkukuvassa $u$ muuttaa yhden merkin kuvassa $v$. Automorfismi $f$ ei voi muuttaa samaa solmun $v$ merkkiä solmun $u$ naapurustossa, koska muuten $f$ kuvaisi kaksi solmun $u$ naapuria samaksi solmuksi. Voidaan ajatella, että $f$ permutoi merkkien paikkoja solmun $u$ ympäristössä. 
 
@@ -402,7 +402,7 @@ Olkoot $f_1, f_2 \in Aut(G)$.
 \end{center}
 Tästä seuraa, että $\phi(f_1 \circ f_2) = \phi(f_1) \circ \phi(f_2)$, eli kuvaus $\phi$ on homomorfismi.
 
-Tarkastellaan kuvauksen $\phi$ ydintä. Symmetrisen ryhmän $S_n$ neutraalialkio on identiteettikuvaus $id$. Automorfismin $f$ kuva $\phi(f)$ on identiteettikuvaus jos ja vain jos $ \forall u \in G, 0 < i \leq n: f(u + 1_i) = f(u) + 1_i$. Toisaalta $u = \Sigma 1_k$ jonkin indeksijoukon yli, joten $f(u) = u + f(\bar{0})$. Solmun $\bar{0}$ mahdolliset kuvat määrävät siis kuvauksen $\phi$ ytimen alkiot. Olkoot $f_1, f_2 \in Ker(\phi)$. $(f_1 \circ f_2)(u) = u + f_1(\bar{0}) + f_2(\bar{0})$, joten $Ker(\phi) \simeq C_2^n$. Toisaalta joukko $H = \{f \in Aut(G) : f(\hat{0}) = \hat{0}\} \simeq S_n$ muodostaa myös $Aut(G)$:n aliryhmän, sillä pelkät merkkipermutaatiot ovat myös automorfismeja. Koska $H$ ei muuta merkkejä, ja $Ker(\phi)$ ei permutoi merkkien paikkoja, $H \cap Ker(\phi) = \{ id \}$. Koska $Ker(\phi)$ on homomorfismin ydin, $Ker(\phi) \trianglelefteq Aut(G)$.
+Tarkastellaan kuvauksen $\phi$ ydintä. Symmetrisen ryhmän $S_n$ neutraalialkio on identiteettikuvaus $id$. Automorfismin $f$ kuva $\phi(f)$ on identiteettikuvaus jos ja vain jos $ \forall u \in G, 0 < i \leq n: f(u + 1_i) = f(u) + 1_i$. Toisaalta $u = \Sigma 1_k$ jonkin indeksijoukon yli, joten $f(u) = u + f(\bar{0})$. Solmun $\bar{0}$ mahdolliset kuvat määrävät siis kuvauksen $\phi$ ytimen alkiot. Olkoot $f_1, f_2 \in Ker(\phi)$. $(f_1 \circ f_2)(u) = u + f_1(\bar{0}) + f_2(\bar{0})$, joten $Ker(\phi) \simeq C_2^n$. Toisaalta joukko $H = \{f \in Aut(G) : f(\bar{0}) = \bar{0}\} \simeq S_n$ muodostaa myös $Aut(G)$:n aliryhmän, sillä pelkät merkkipermutaatiot ovat myös automorfismeja. Koska $H$ ei muuta merkkejä, ja $Ker(\phi)$ ei permutoi merkkien paikkoja, $H \cap Ker(\phi) = \{ id \}$. Koska $Ker(\phi)$ on homomorfismin ydin, $Ker(\phi) \trianglelefteq Aut(G)$.
 
 Automorfismiryhmä $Aut(G)$ ei sisällä muita aliryhmiä, sillä mielivaltainen automorfismi voidaan esittää edellä mainittujen aliryhmien avulla. Tästä seuraa että $Aut(G) = Ker(\phi) \rtimes H = \simeq C_2^n \rtimes S_n$.
 \end{example}
