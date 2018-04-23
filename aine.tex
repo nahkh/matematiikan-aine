@@ -22,13 +22,9 @@
 
 \title{Graafien automorfismiryhmä}
 \author{Juuso Valli}
-\date{22. 4. 2018}
+\date{23. 4. 2018}
 
 \maketitle
-
-\begin{abstract}
-Tutkitaan graafien muodostamia automorfismiryhmiä sekä mielivaltaista ryhmää vastaavan graafin konstruoimista.
-\end{abstract}
 
 \tableofcontents
 
@@ -174,26 +170,13 @@ Tämä nähdään helposti vastaesimerkin kautta. Tarkastellaan esimerkin \ref{e
 \end{huom}
 
 \begin{example}
-Esimerkin \ref{ex:d4} mukaisen graafin symmetriaryhmä $Aut(G)$ on isomorfinen diedriryhmän $D_4$ kanssa. Yleisemmin $n$:n solmun rengasgraafi on isomorfinen diedriryhmän $D_n$ kanssa. Tämä nähdään helposti tarkastelemalla $Aut(G)$:n ryhmätaulua. Otetaan $Aut(G)$:n alkioille käyttöön seuraavat merkinnät: $\alpha_{i, j} \in Aut(G), 0 < i \leq n, j \in \{0, 1\}$, siten että $\alpha_{i, j}$ kuvaa solmun $v_1$ alkioksi $v_i$ ja kääntää rengasgraafin suunnan mikäli $j = 1$. Tällä tavoin määriteltyjen isomorfismien lisäksi $Aut(G)$:llä ei ole muita isomorfismeja.
+Esimerkin \ref{ex:d4} mukaisen graafin symmetriaryhmä $Aut(G)$ on isomorfinen diedriryhmän $D_4$ kanssa. Yleisemmin $n$:n solmun rengasgraafi on isomorfinen diedriryhmän $D_n$ kanssa.
 
-Näitä merkintöjä käyttäen $Aut(G)$:n symmeriaryhmän ryhmätaulu on seuraavanlainen tapauksessa $n=4$:
+Olkoon $G$ $n$:n solmun rengasgraafi, ja $v_i$ sen $i$:nnes solmu jossakin järjestyksessä. Tässä $v_{i + n} = v_{i}$. Solmujen orientaatiolla tarkoitetaan sitä, ovatko alkiot indeksoitu myötä- vai vastapäivään.
 
-\begin{center}
-\begin{tabular} {l | l l l l l l l l}
-	                & $\alpha_{1, 0}$ & $\alpha_{2, 0}$ & $\alpha_{3, 0}$ & $\alpha_{4, 0}$ & $\alpha_{1, 1}$ & $\alpha_{2, 1}$ & $\alpha_{3, 1}$ & $\alpha_{4, 1}$ \\
-\hline
-$\alpha_{1, 0}$ & $\alpha_{1, 0}$ & $\alpha_{2, 0}$ & $\alpha_{3, 0}$ & $\alpha_{4, 0}$ & $\alpha_{1, 1}$ & $\alpha_{2, 1}$ & $\alpha_{3, 1}$ & $\alpha_{4, 1}$ \\
-$\alpha_{2, 0}$ & $\alpha_{2, 0}$ & $\alpha_{3, 0}$ & $\alpha_{4, 0}$ & $\alpha_{1, 0}$ & $\alpha_{2, 1}$ & $\alpha_{3, 1}$ & $\alpha_{4, 1}$ & $\alpha_{1, 1}$ \\
-$\alpha_{3, 0}$ & $\alpha_{3, 0}$ & $\alpha_{4, 0}$ & $\alpha_{1, 0}$ & $\alpha_{2, 0}$ & $\alpha_{3, 1}$ & $\alpha_{4, 1}$ & $\alpha_{1, 1}$ & $\alpha_{2, 1}$ \\
-$\alpha_{4, 0}$ & $\alpha_{4, 0}$ & $\alpha_{1, 0}$ & $\alpha_{2, 0}$ & $\alpha_{3, 0}$ & $\alpha_{4, 1}$ & $\alpha_{1, 1}$ & $\alpha_{2, 1}$ & $\alpha_{3, 1}$ \\
-$\alpha_{1, 1}$ & $\alpha_{1, 1}$ & $\alpha_{4, 1}$ & $\alpha_{3, 1}$ & $\alpha_{2, 1}$ & $\alpha_{1, 0}$ & $\alpha_{4, 0}$ & $\alpha_{3, 0}$ & $\alpha_{2, 0}$ \\
-$\alpha_{2, 1}$ & $\alpha_{2, 1}$ & $\alpha_{1, 1}$ & $\alpha_{4, 1}$ & $\alpha_{1, 1}$ & $\alpha_{2, 0}$ & $\alpha_{1, 0}$ & $\alpha_{4, 0}$ & $\alpha_{1, 0}$ \\
-$\alpha_{3, 1}$ & $\alpha_{3, 1}$ & $\alpha_{2, 1}$ & $\alpha_{1, 1}$ & $\alpha_{4, 1}$ & $\alpha_{3, 0}$ & $\alpha_{2, 0}$ & $\alpha_{1, 0}$ & $\alpha_{4, 0}$ \\
-$\alpha_{4, 1}$ & $\alpha_{4, 1}$ & $\alpha_{3, 1}$ & $\alpha_{2, 1}$ & $\alpha_{3, 1}$ & $\alpha_{4, 0}$ & $\alpha_{3, 0}$ & $\alpha_{2, 0}$ & $\alpha_{3, 0}$ \\
-\end{tabular}
-\end{center}
+Jokainen automorfismi joko säilyttää solmujen orientaation tai kääntää sen. Tästä voidaan määritellä homomorfismi $\phi: Aut(G) \rightarrow C_2$, missä $\phi(f) = 0$ mikäli $f$ säilyttää solmujen orientaation, muullon $\phi(f) = 1$. Homomorfismin $\phi$ ydin $Ker(\phi) = \{f \in Aut(G) |\; \exists 0 < i \leq n \; \forall 0 < j \leq n: f(v_j) = v_{i + j}\}$ muodostuu kuvauksista, jotka siirtävät graafin solmuja kääntämättä niiden orientaatiota. Tämä on isomorfinen ryhmän $C_n$ kanssa. Olkoot kuvaus $rev \in Aut(G):  rev(v_i) = v_{n - i + 1}$ ja automorfismiryhmän $Aut(G)$ aliryhmä $H = \{ id \} \cup \{ rev \}$. Olkoon $\pi: C_2 \rightarrow H$ siten, että $\pi(0) = id, \pi(1) = rev$. Kuvaus $pi$ on homomorfismi, jolla $C_2$ operoi ryhmässä $Aut(G)$.
 
-
+Tästä seuraa se, että $Aut(G) \simeq C_n \rtimes C_2 \simeq D_n$.
 \end{example}
 
 \begin{example}
@@ -466,31 +449,24 @@ Määritellään homomorfismi $\sigma: S_4 \rightarrow Aut(G)$ siten, että $S_4
 Olkoon $R$ äärellinen ryhmä. On olemassa äärellinen graafi $G$ siten, että $Aut(G) \simeq R$.
 \begin{proof}
 
-Olkoon $G$ ryhmän $R$ Cayleyn graafi, joka on väritetty ja suunnattu. Tutkitaan ensin väritetyn ja suunnatun graafin tapausta, ja esitellään menetelmä jolla voidaan siirtyä värittömiin ja suuntaamattomiin graafeihin.
+Olkoon $G$ ryhmän $R$ oikea Cayleyn graafi, joka on väritetty ja suunnattu. Tutkitaan ensin väritetyn ja suunnatun graafin tapausta, ja esitellään menetelmä jolla voidaan siirtyä värittömiin ja suuntaamattomiin graafeihin.
 
-Olkoon $S$ ryhmän $R$ generaattorijoukko. Cayleyn graafin konstruktion nojalla on olemassa bijektiot $\alpha: R \rightarrow V_G$ ja $\beta: R \times S \rightarrow E_G$. 
+Olkoon $S$ ryhmän $R$ generaattorijoukko. Oikea Cayleyn graafi sisältää kaaret $E_G = \{ (a, ab) : a \in R, b \in S\}$. Cayleyn graafin konstruktion nojalla on selvää, että on olemassa bijektio $\alpha: R \rightarrow V_G$. Merkitään $v_a = \alpha(a)$.
 
-Olkoot $a \in S$, $E_a = \{e \in E_G | \exists b \in R: \beta(b, a) = e\}$, ja $f_a: G \rightarrow G$ siten, että $\forall u \in G: f_a(u) = v, uv \in E_a$. 
+Määritellään ryhmän $R$ mielivaltaisia alkioita $a$ vastaavat kuvaukset $f_a: G \rightarrow G, f_a(v_b) = v_{ab}$.
 
 Kuvaus $f_a$ on automorfismi, sillä
 \begin{center}
 \begin{tabular}{r l}
-$uv \in E_G$ & $\Leftrightarrow \exists b \in R: \alpha^{-1}(u)b = \alpha^{-1}(v)$ \\
-& $\Leftrightarrow \exists b \in R: \alpha^{-1}(u)ba = \alpha^{-1}(v)a$ \\
-& $\Leftrightarrow \exists b' = aba^{-1} \in R: \alpha^{-1}(u)ab' = \alpha^{-1}(v)a$ \\
+$uv \in E_G$ & $\Leftrightarrow \exists b \in S: \alpha^{-1}(u) = \alpha^{-1}(v)b$ \\
+& $\Leftrightarrow \exists b \in R: a\alpha^{-1}(u) = a\alpha^{-1}(v)b$ \\
 & $\Leftrightarrow f_a(u)f_a(v) \in E_G$\\
 \end{tabular}
 \end{center}
 
-Olkoon $a \in R$. Koska alkio $a$ voidaan esittää generoijien tulona $a = s_1 \dots s_n$, voidaan vastaava $f_a$ määritellä generoijia vastaavien kuvausten kompositiona $f_a = f_{s_1} \circ \dots \circ f_{s_n}$.
-
-Olkoot $a, b \in R$. Koska alkio $ab$ voidaan esittää generoijien tulona $ab = a_1 \dots a_n b_1 \dots b_m$, kuvaus $f_{ab}$ voidaan esittää muodossa $f_{ab} = f_{a_1} \circ \dots \circ f_{a_n} \circ f_{b_1} \circ \dots \circ f_{b_m}$, joka voidaan yhdistää muotoon $f_a \circ f_b$.
-
-Olkoon $f \in Aut(G)$ mielivaltainen. Olkoot $a, b \in R$ siten, että $\exists c \in R: ac = b$. Koska kuvauksen alkupäätä voidaan siirtää kertomalla yhtälö $ac = b$ vasemmalta, nähdään että alkio $c$ ei riipu $a$:n valinnasta, eli $f = f_c$ aiemman konstruktion mukaan.
+Olkoon $f \in Aut(G)$ mielivaltainen. Yksittäisen solmun kuva riittää määräämään kuvauksen $f$ täysin, sillä kuvan $f(v_a)$ naapureilla on aina täsmälleen yksi mahdollinen kuva joka säilyttää graafin kaaret. Selvästi $\exists b \in R: f(v_a) = v_{ba}$ joten $f = f_b$.
 
 Edellisen nojalla voimme määritellä kuvauksen $\phi: R \rightarrow Aut(G): \phi(a) = f_a$, joka on isomorfismi.
-
-
 
 Tutkitaan lisäksi miten voidaan konstruoida väritön ja suuntaamaton graafi $G'$ jolla $Aut(G') \simeq Aut(G) \simeq R$. 
 Korvataan graafin väritetyt ja suunnatut kaaret aligraafeilla, jotka ovat epäsymmetrisiä ja sellaisia, että vain samaa väriä vastaavat aligraafit ovat isomorfisia keskenään. Esimerkiksi seuraavalla tavalla:
@@ -500,19 +476,20 @@ Korvataan graafin väritetyt ja suunnatut kaaret aligraafeilla, jotka ovat epäs
                     thick,solmu/.style={circle,draw,font=\sffamily\Large\bfseries}]
 
 \node[solmu] (L) {};
-\node[solmu] (TL)[above right of=L] {};
+\node[solmu] (TL)[above right= 0.3cm and 1cm of L] {};
 \node[solmu] (T) [above right=0.3cm and 1cm of TL] {};
 \node[solmu] (M1) [below right=0.3cm and 0.5cm of TL] {};
 \node[solmu] (M2) [right of=M1] {};
 \node[solmu] (TR1) [above right=0.3cm and 0.5cm of M2] {};
 \node[solmu] (TR2) [right of=TR1] {};
-\node[solmu] (B1) [below right of=L] {$1$};
-\node[solmu] (B2) [right of=B1] {$2$};
-\node[solmu] (B3) [right of=B2] {$3$};
-\node (B4) [right of=B3] {...};
-\node[solmu] (B5) [right of=B4] {$n$};
+\node[solmu] (B1) [below right of=L] {};
+\node[solmu] (B2) [right of=B1] {};
+\node[solmu] (B3) [right of=B2] {};
+\node[solmu] (B4) [right of=B3] {$1$};
+\node (B5) [right of=B4] {...};
+\node[solmu] (B6) [right of=B5] {$n$};
 \node (INVL) [left of=L] {...};
-\node[solmu] (R) [above right of = B5] {};
+\node[solmu] (R) [above right of = B6] {};
 \node (INVR) [right of=R] {...};
 
  \path[every node/.style={font=\sffamily\small}]
@@ -531,16 +508,17 @@ Korvataan graafin väritetyt ja suunnatut kaaret aligraafeilla, jotka ovat epäs
     (B2) edge node[left] {} (B3)
     (B3) edge node[left] {} (B4)
     (B4) edge node[left] {} (B5)
-    (B5) edge node[left] {} (R);
+    (B5) edge node[left] {} (B6)
+    (B6) edge node[left] {} (R);
 \end{tikzpicture}
 \end{center}
-missä jokainen väri korvataan $n$ solmun ketjun sisältävällä aligraafilla, jossa $n$ vastaa värin numerointia. Aligraafin ylemmän komponentin orientaatio vastaa alkuperäisen kaaren suuntaa. Näin saadaan suuntaamaton, väritön graafi $G'$. Voidaan sanoa että $Aut(G) \simeq Aut(G')$, koska jokaisesta alkuperäisen graafin solmusta lähtee yksi kopio kutakin aligraafityyppiä, aligraafit eivät sisällä omia symmetrioita ja aligraafit eivät ole keskenään isomorfisia.
+missä jokainen väri korvataan $n$ solmun ketjun sisältävällä aligraafilla, jossa $n$ vastaa värin numerointia. Aligraafin ylemmän komponentin orientaatio vastaa alkuperäisen kaaren suuntaa. Näin saadaan suuntaamaton, väritön graafi $G'$. Huomataan että aligraafityypit eivät ole keskenään isomorfismisia, sillä jokainen sisältää eri määrän solmuja. Jokainen aligraafi sisältää täsmälleen yhden 5-syklin, joka on epäsymmetrisesti kiinnitetty aligraafiin. Muut aligraafin solmut määräytyvät 5-syklin mukaan. Graafi ei sisällä muita 5-syklejä, sillä jokainen muu sykli sisältää vähintään 6 solmua. Tästä seuraa se, että $Aut(G) \simeq Aut(G')$.
 \end{proof}
 \end{teor}
 
 
 \section{Lähteet}
-László Babai: Automorphism groups, isomorphism, reconstruction, Budapest, 1994.
-Tero Harju: Lecture Notes on Graph Theory, Turku, Suomi, 2007.
-Markku Koppinen: Ryhmäteoria, Turku, Suomi, 2007.
+László Babai: Automorphism groups, isomorphism, reconstruction, Budapest, 1994.\\
+Tero Harju: Lecture Notes on Graph Theory, Turku, Suomi, 2007.\\
+Markku Koppinen: Ryhmäteoria, Turku, Suomi, 2007.\\
 \end{document}
