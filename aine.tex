@@ -20,7 +20,7 @@
 
 \begin{document}
 
-\title{Graafien automorfismiryhmä}
+\title{Graafien automorfismiryhmät}
 \author{Juuso Valli}
 \date{23. 4. 2018}
 
@@ -33,11 +33,11 @@
 \section{Määritelmiä ja merkintöjä}
 
 Olkoon $V$ äärellinen joukko. Olkoon $E(V) = \{\{u, v\} | u, v \in V, u \neq v\}$ joukon $V$ alijoukkojen joukko, jonka jäsenet sisältävät täsmälleen kaksi eri solmua.
-Olkoon \emph{graafi} $G = (V, E), E \subseteq E(V)$. Joukkoa $V$ kutsutaan graafin $G$ \emph{solmuiksi}, ja joukkoa $E$ kutsutaan \emph{kaariksi}. Solmuja joiden välillä on kaari kutsutaan \emph{naapureiksi}. Annetun solmun kaikkien naapureiden joukkoa kutsutaan solmun \emph{naapurustoksi}. Annetun graafin solmujoukosta kätetään merkintää $V_G$, ja kaarijoukosta merkintää $E_G$.
-Kaaresta $\{u, v\}$ käytetään merkintää $uv$. Huomaa että näillä merkinnöillä $uv = vu$.
+Olkoon \emph{graafi} $G = (V, E), E \subseteq E(V)$. Joukkoa $V$ kutsutaan graafin $G$ \emph{solmuiksi}, ja joukkoa $E$ kutsutaan \emph{kaariksi}. Solmuja joiden välillä on kaari kutsutaan \emph{naapureiksi}. Annetun solmun kaikkien naapureiden joukkoa kutsutaan solmun \emph{naapurustoksi}. Solmut eivät sisälly omaan naapurustoonsa. Annetun graafin solmujoukosta kätetään merkintää $V_G$, ja kaarijoukosta merkintää $E_G$.
+Kaaresta $\{u, v\}$ käytetään merkintää $uv$. Huomaa, että näillä merkinnöillä $uv = vu$.
 Yksinkertaisuuden vuoksi solmuista käytetään myös merkintää $v \in G$ merkinnän $v \in V_G$ sijaan.
 
-Olkoot $G$ ja $H$ graafeja. Graafit $G$ ja $H$ ovat \emph{isomorfiset} $G \cong H$ mikäli on olemassa bijektio $f: V_G \rightarrow V_H$ siten, että
+Olkoot $G$ ja $H$ graafeja. Graafit $G$ ja $H$ ovat \emph{isomorfiset} $G \simeq H$ mikäli on olemassa bijektio $f: V_G \rightarrow V_H$ siten, että
 \begin{center}
 \begin{math}
 uv \in E_G \Longleftrightarrow f(u)f(v) \in E_H
@@ -47,7 +47,7 @@ kaikilla $u, v \in G$.
 
 Tällaisia bijektioita kutsutaan \emph{isomorfismeiksi}.
 
-Graafin $G$ \emph{automorfismit} ovat sen isomorfismeja itsensä kanssa. Triviaalisti nähdään että identiteettikuvaus on kaikkien graafien automorfismi, mutta graafeilla voi olla myös muita automorfismeja.
+Graafin $G$ \emph{automorfismit} ovat sen isomorfismeja itsensä kanssa. Triviaalisti nähdään, että identiteettikuvaus on kaikkien graafien automorfismi, mutta graafeilla voi olla myös muita automorfismeja.
 
 \begin{example}
 \label{ex:d4}
@@ -166,17 +166,17 @@ Graafin automorfismiryhmää kutsutaan myös graafin symmetriaryhmäksi.
 
 \begin{huom}
 Graafien automorfismiryhmät eivät yleisesti ole kommutatiivisia.\\
-Tämä nähdään helposti vastaesimerkin kautta. Tarkastellaan esimerkin \ref{ex:d4} mukaista graafia. Olkoon $f$ esimerkissä esitetty automorfismi. Olkoon kuvaus $g: V_G \rightarrow V_G, g(v_1) = v_1, g(v_2) = v_4, g(v_3) = v_3, g(v_4) = v_2$. Kuvaus $g$ on selvästi myös graafin $G$ automorfismi. Mikäli automorfismiryhmä olisi kommutatiiviinen, olisi $f \circ g = g \circ f$. Kirjoittamalla kuvaukset auki nähdään että $f \circ g(v_1) = f(g(v_1)) = f(v_1) = v_2$, mutta toisaalta $g \circ f (v_1) = g(f(v_1)) = g(v_2) = v_4$, mistä seuraa ristiriita.
+Tämä nähdään helposti vastaesimerkin kautta. Tarkastellaan esimerkin \ref{ex:d4} mukaista graafia. Olkoon $f$ esimerkissä esitetty automorfismi. Olkoon kuvaus $g: V_G \rightarrow V_G, g(v_1) = v_1, g(v_2) = v_4, g(v_3) = v_3, g(v_4) = v_2$. Kuvaus $g$ on selvästi myös graafin $G$ automorfismi. Mikäli automorfismiryhmä olisi kommutatiiviinen, olisi $f \circ g = g \circ f$. Kirjoittamalla kuvaukset auki nähdään, että $f \circ g(v_1) = f(g(v_1)) = f(v_1) = v_2$, mutta toisaalta $g \circ f (v_1) = g(f(v_1)) = g(v_2) = v_4$, mistä seuraa ristiriita.
 \end{huom}
 
 \begin{example}
 Esimerkin \ref{ex:d4} mukaisen graafin symmetriaryhmä $Aut(G)$ on isomorfinen diedriryhmän $D_4$ kanssa. Yleisemmin $n$:n solmun rengasgraafi on isomorfinen diedriryhmän $D_n$ kanssa.
 
-Olkoon $G$ $n$:n solmun rengasgraafi, ja $v_i$ sen $i$:nnes solmu jossakin järjestyksessä. Tässä $v_{i + n} = v_{i}$. Solmujen orientaatiolla tarkoitetaan sitä, ovatko alkiot indeksoitu myötä- vai vastapäivään.
+Olkoon $G$ $n$:n solmun rengasgraafi, ja $v_i$ sen $i$:nnes solmu jossakin järjes\-tyk\-sessä. Solmujen orientaatiolla tarkoitetaan sitä, ovatko alkiot indeksoitu myötä- vai vastapäivään.
 
-Jokainen automorfismi joko säilyttää solmujen orientaation tai kääntää sen. Tästä voidaan määritellä homomorfismi $\phi: Aut(G) \rightarrow C_2$, missä $\phi(f) = 0$ mikäli $f$ säilyttää solmujen orientaation, muullon $\phi(f) = 1$. Homomorfismin $\phi$ ydin $Ker(\phi) = \{f \in Aut(G) |\; \exists 0 < i \leq n \; \forall 0 < j \leq n: f(v_j) = v_{i + j}\}$ muodostuu kuvauksista, jotka siirtävät graafin solmuja kääntämättä niiden orientaatiota. Tämä on isomorfinen ryhmän $C_n$ kanssa. Olkoot kuvaus $rev \in Aut(G):  rev(v_i) = v_{n - i + 1}$ ja automorfismiryhmän $Aut(G)$ aliryhmä $H = \{ id \} \cup \{ rev \}$. Olkoon $\pi: C_2 \rightarrow H$ siten, että $\pi(0) = id, \pi(1) = rev$. Kuvaus $pi$ on homomorfismi, jolla $C_2$ operoi ryhmässä $Aut(G)$.
+Jokainen automorfismi joko säilyttää solmujen orientaation tai kääntää sen. Tästä voidaan määritellä homomorfismi $\phi: Aut(G) \rightarrow C_2$, missä $\phi(f) = 0$ mikäli $f$ säilyttää solmujen orientaation, muulloin $\phi(f) = 1$. Homomorfismin $\phi$ ydin $Ker(\phi) = \{f_i \in Aut(G), o \leq i < n | \forall 0 \leq j < n: f_i(v_j) = v_{i + j\; (mod n)}\}$ muodostuu kuvauksista, jotka siirtävät graafin solmuja kään\-tämät\-tä niiden orientaatiota. Tämä on isomorfinen ryhmän $C_n$ kanssa. Olkoot kuvaus $rev \in Aut(G):  rev(v_i) = v_{n - 1 - i}$. Selvästi $rev \circ rev = id$, joten $\langle rev \rangle$ määrittää kahden alkion aliryhmän, joka leikkaus aliryhmän $Ker(\phi)$ kanssa on $Ker(\phi) \cap \langle rev \rangle = \{ id \}$.
 
-Tästä seuraa se, että $Aut(G) \simeq C_n \rtimes C_2 \simeq D_n$.
+Olkoon $f \in Aut(G)$ mielivaltainen, ja $0 \leq i < n$ siten, että $f(v_0) = v_i$. Nyt $(f_i^{-1} \circ f)(0) = 0$, eli $(f_i^{-1} \ circ f \in \langle rev \rangle$. Tästä seuraa, että $f$ voidaan esittää muodossa $f = f_i \circ rev^k$ missä $k \in \{0, 1\}$. Tästä seuraa se, että $Aut(G) = Ker(\phi) \langle rev \rangle$, mistä seuraa edellisten kohtien perusteella se, että $Aut(G) = Ker(\phi) \rtimes \langle rev \rangle \simeq D_n$.
 \end{example}
 
 \begin{example}
@@ -223,7 +223,7 @@ Täyden graafin $K_n$ symmetriaryhmä on $S_n$.
 \end{tikzpicture}
 \end{center}
 
-Koska jokainen solmu on kaikkien muiden solmujen naapuri, jokainen $K_n$:n bijektio itsensä kanssa on automorfismi. Tästä seuraa se, että graafin $K_n$ automorfismiryhmä on $\Sigma(K_n) \simeq S_n$.
+Koska jokainen solmu on kaikkien muiden solmujen naapuri, jokainen $K_n$:n bijektio itsensä kanssa on automorfismi. Tästä seuraa se, että graafin $K_n$ automorfismiryhmä on $Sym(K_n) \simeq S_n$.
 \end{example}
 
 \begin{example}
@@ -250,7 +250,7 @@ Täysin kaksijakoisen graafin $K_{nm}, n \neq m$ symmetriaryhmä on $S_n \times 
 \end{tikzpicture}
 \end{center}
 
-Olkoot $A, B \subset G_v$ graafin ylä- ja alakomponentit. Olkoot $H = \{f \in Aut(G) : f|_A = id\}, K = \{f \in Aut(G) : f|_B = id\}$. Kumpikin osajoukko on selvästi aliryhmä, sillä $(f \circ g)|_X = id$ jos $f|_X = id, g|_X = id$. Lisäksi nähdään että $H \cap K = \{ id \}$.
+Olkoot $A, B \subset G_v$ graafin ylä- ja alakomponentit. Olkoot $H = \{f \in Aut(G) : f|_A = id\}, K = \{f \in Aut(G) : f|_B = id\}$. Kumpikin osajoukko on selvästi aliryhmä, sillä $(f \circ g)|_X = id$ jos $f|_X = id, g|_X = id$. Lisäksi nähdään, että $H \cap K = \{ id \}$.
 
 Määritellään funktion jako seuraavasti:
 
@@ -266,7 +266,7 @@ f_X(x) =
 \end{math}
 \end{center}
 
-Mielivaltainen automorfismi $f$ voidaan jakaa kahteen osaan joukkojen $A$ ja $B$ mukaan, josta saadaan $f = f_A \circ f_B, f_A \in K, f_B \in H$. Tästä seuraa että $G = HK$.
+Mielivaltainen automorfismi $f$ voidaan jakaa kahteen osaan joukkojen $A$ ja $B$ mukaan, josta saadaan $f = f_A \circ f_B, f_A \in K, f_B \in H$. Tästä seuraa, että $G = HK$.
 
 Olkoot $h \in H, k \in K$. Tapauksessa $x \in A$:
 \begin{center}
@@ -281,7 +281,7 @@ Toisaalta tapauksessa $x \in B$:
 \end{math}
 \end{center}
 
-Eli $hk = kh$. Tästä seuraa että $Aut(G) = H \times K = S_n \times S_m$.
+Eli $hk = kh$. Tästä seuraa, että $Aut(G) = H \times K = S_n \times S_m$.
 \end{example}
 
 \begin{example}
@@ -374,7 +374,7 @@ Selvästi $ \forall u \in \mathbb{Z}_2^n: u + u = \bar{0}$.
 
 Olkoot $G$ hamming-graafi ja $f$ sen automorfismi. Olkoot $u \in G$ ja $v = f(u)$. Koska jokainen solmun $u$ naapuri kuvatuu solmun $v$ naapuriksi, yhden merkin muuttaminen alkukuvassa $u$ muuttaa yhden merkin kuvassa $v$. Automorfismi $f$ ei voi muuttaa samaa solmun $v$ merkkiä solmun $u$ naapurustossa, koska muuten $f$ kuvaisi kaksi solmun $u$ naapuria samaksi solmuksi. Voidaan ajatella, että $f$ permutoi merkkien paikkoja solmun $u$ ympäristössä. 
 
-Olkoot $0 < i, j \leq n, i \neq j$. Solmut $u + 1_i$ ja $u+ i_j$ ovat solmun $u$ naapureita, joiden kuvat poikkeavat solmusta $v$ joillakin indekseillä $i' \neq j'$. Koska $v + 1_{i'} + 1_{j'} = v + 1_{j'} + 1_{i'}$ ja $f(u + 1_i + 1_j) = v + 1_{i'} + 1_{j'}$ nähdään että $f(u + 1_i + 1_j) + f(u + 1_i) = f(u + i_j) + f(u)$. Tästä seuraa se, että automorfismin $f$ muodostamat merkkipermutaatiot eivät riipu solmun $u$ valinnasta. Voidaan siis määritellä kuvaus ${\phi: Aut(G) \rightarrow S_n}$, joka kuvaa automorfismit niiden merkkipermutaatioiksi. 
+Olkoot $0 < i, j \leq n, i \neq j$. Solmut $u + 1_i$ ja $u+ 1_j$ ovat solmun $u$ naapureita, joiden kuvat poikkeavat solmusta $v$ joillakin indekseillä $i' \neq j'$. Solmun $u$ lisäksi on olemassa vain yksi toinen solmu joka on solmujen $u + 1_i$ ja $u + 1_j$ naapureita: $u + 1_i + 1_j$. Sitä vastaava kuva voidaan esittää kahdella tavalla: $f(u + 1_i + 1_j) = f(u + 1_i) + 1_{j''} = f(u + 1_j) + 1_{i''}$ joillakin indekseillä $i'' \neq j', j'' \neq i'$. Tästä seuraa, että $v + 1_{i'} + 1_{j''} = v + 1_{j'} + 1_{i''} \Leftrightarrow 1_{i'} = 1_{i'} \wedge 1_{j'} = j_{j''}$. Tämän nojalla on selvää, että  automorfismin $f$ muodostamat merkkipermutaatiot eivät riipu solmun $u$ valinnasta. Voidaan määritellä kuvaus ${\phi: Aut(G) \rightarrow S_n}$, joka kuvaa automorfismit niiden merkkipermutaatioiksi.
 
 Olkoot $f_1, f_2 \in Aut(G)$. 
 \begin{center}
@@ -385,9 +385,9 @@ Olkoot $f_1, f_2 \in Aut(G)$.
 \end{center}
 Tästä seuraa, että $\phi(f_1 \circ f_2) = \phi(f_1) \circ \phi(f_2)$, eli kuvaus $\phi$ on homomorfismi.
 
-Tarkastellaan kuvauksen $\phi$ ydintä. Symmetrisen ryhmän $S_n$ neutraalialkio on identiteettikuvaus $id$. Automorfismin $f$ kuva $\phi(f)$ on identiteettikuvaus jos ja vain jos $ \forall u \in G, 0 < i \leq n: f(u + 1_i) = f(u) + 1_i$. Toisaalta $u = \Sigma 1_k$ jonkin indeksijoukon yli, joten $f(u) = u + f(\bar{0})$. Solmun $\bar{0}$ mahdolliset kuvat määrävät siis kuvauksen $\phi$ ytimen alkiot. Olkoot $f_1, f_2 \in Ker(\phi)$. $(f_1 \circ f_2)(u) = u + f_1(\bar{0}) + f_2(\bar{0})$, joten $Ker(\phi) \simeq C_2^n$. Toisaalta joukko $H = \{f \in Aut(G) : f(\bar{0}) = \bar{0}\} \simeq S_n$ muodostaa myös $Aut(G)$:n aliryhmän, sillä pelkät merkkipermutaatiot ovat myös automorfismeja. Koska $H$ ei muuta merkkejä, ja $Ker(\phi)$ ei permutoi merkkien paikkoja, $H \cap Ker(\phi) = \{ id \}$. Koska $Ker(\phi)$ on homomorfismin ydin, $Ker(\phi) \trianglelefteq Aut(G)$.
+Tarkastellaan kuvauksen $\phi$ ydintä. Symmetrisen ryhmän $S_n$ neutraalialkio on identiteettikuvaus $id$. Automorfismin $f$ kuva $\phi(f)$ on identiteettikuvaus jos ja vain jos $ \forall u \in G, 0 < i \leq n: f(u + 1_i) = f(u) + 1_i$. Toisaalta $u = \sum{k \in I} 1_k$ jonkin indeksijoukon $I \subset \{1, \dots , n\}$ yli, joten $f(u) = u + f(\bar{0})$. Solmun $\bar{0}$ mahdolliset kuvat määrävät siis kuvauksen $\phi$ ytimen alkiot. Olkoot $f_1, f_2 \in Ker(\phi)$. $(f_1 \circ f_2)(u) = u + f_1(\bar{0}) + f_2(\bar{0})$, joten $Ker(\phi) \simeq C_2^n$. Toisaalta joukko $H = \{f \in Aut(G) : f(\bar{0}) = \bar{0}\} \simeq S_n$ muodostaa myös $Aut(G)$:n aliryhmän, sillä pelkät merkkipermutaatiot ovat myös automorfismeja. Koska $H$ ei muuta merkkejä, ja $Ker(\phi)$ ei permutoi merkkien paikkoja, $H \cap Ker(\phi) = \{ id \}$. Koska $Ker(\phi)$ on homomorfismin ydin, $Ker(\phi) \trianglelefteq Aut(G)$.
 
-Automorfismiryhmä $Aut(G)$ ei sisällä muita aliryhmiä, sillä mielivaltainen automorfismi voidaan esittää edellä mainittujen aliryhmien avulla. Tästä seuraa että $Aut(G) = Ker(\phi) \rtimes H = \simeq C_2^n \rtimes S_n$.
+Automorfismiryhmä $Aut(G)$ ei sisällä muita aliryhmiä, sillä mielivaltainen automorfismi voidaan esittää edellä mainittujen aliryhmien avulla. Tästä seuraa, että $Aut(G) = Ker(\phi) \rtimes H = \simeq C_2^n \rtimes S_n$.
 \end{example}
 
 \begin{example}
@@ -435,8 +435,8 @@ Olkoon $G$ seuraava graafi:
 \end{tikzpicture}
 \end{center}
 
-Käytetään alkiosta $0$ termiä runko, alkioista $0 \dots 4$ termiä oksa ja muista alkioista termiä lehti. Helposti nähdään, että graafin $G$ automorfismit säilyttävät rungon paikallaan, kuvaavat oksat oksiksi ja lehdet lehdiksi. Lisäksi saman oksan lehdet pysyvät yhdessä. Oksat voivat kaikki vaihtaa paikka keskenään, joten jokainen automorfismi $f$ määrää oksien jonkin permutaation. 
-Olkoon kuvaus $\phi: Aut(G) \rightarrow S_4$ siten että $f \in Aut(G)$ kuvautuu oksien permutaatioksi. Kuvaus $\phi$ on selvästi homomorfismi, ja sen ytimessä olevat automorfismit säilyttävät siis oksat paikallan. Koska lehtiä voi permutoida vapaasti annetun oksan ympärillä ja lehtiryppäät eivät vaikuta toisiinsa, koko ydin saadaan lehtien permutaatioryhmien suorana tulona: $Ker(\phi) \simeq S_3^4$. 
+Käytetään alkiosta $0$ termiä runko, alkioista $0 \dots 4$ termiä oksa ja muista alkioista termiä lehti. Helposti nähdään, että graafin $G$ automorfismit säilyttävät rungon paikallaan, kuvaavat oksat oksiksi ja lehdet lehdiksi. Lisäksi saman oksan lehdet pysyvät yhdessä. Oksat voivat kaikki vaihtaa paikkaa keskenään, joten jokainen automorfismi $f$ määrää oksien jonkin permutaation. 
+Olkoon kuvaus $\phi: Aut(G) \rightarrow S_4$ siten, että $f \in Aut(G)$ kuvautuu oksien permutaatioksi. Kuvaus $\phi$ on selvästi homomorfismi, ja sen ytimessä olevat automorfismit säilyttävät siis oksat paikallan. Koska lehtiä voi permutoida vapaasti annetun oksan ympärillä ja lehtiryppäät eivät vaikuta toisiinsa, koko ydin saadaan lehtien permutaatioryhmien suorana tulona: $Ker(\phi) \simeq S_3^4$. 
 
 Määritellään homomorfismi $\sigma: S_4 \rightarrow Aut(G)$ siten, että $S_4$:n alkio kuvautuu automorfismiksi joka permutoi oksia syötealkion tavoin, mutta säilyttää lehtien luonnollisen järjestyksen. Ryhmä $S_4$ operoi tällä homomorfismilla joukossa $Aut(G)$, joten saadaan $Aut(G) \simeq S_3^4 \rtimes S_4$.
 \end{example}
@@ -448,10 +448,11 @@ Määritellään homomorfismi $\sigma: S_4 \rightarrow Aut(G)$ siten, että $S_4
 \begin{teor}
 Olkoon $R$ äärellinen ryhmä. On olemassa äärellinen graafi $G$ siten, että $Aut(G) \simeq R$.
 \begin{proof}
+Tutkitaan ensin väritettyä ja suunnattua Cayleyn graafia, ja esitellään menetelmä jolla voidaan siirtyä värittömiin ja suuntaamattomiin graafeihin.
 
-Olkoon $G$ ryhmän $R$ oikea Cayleyn graafi, joka on väritetty ja suunnattu. Tutkitaan ensin väritetyn ja suunnatun graafin tapausta, ja esitellään menetelmä jolla voidaan siirtyä värittömiin ja suuntaamattomiin graafeihin.
+Olkoot $S$ ryhmän $R$ generaattorijoukko ja $C$ $|S|$:n värin joukko. Määritellään bijektio $\lambda: S -> C$, joka määrittää siis joukon $R$ generaattoreiden värityksen.
 
-Olkoon $S$ ryhmän $R$ generaattorijoukko. Oikea Cayleyn graafi sisältää kaaret $E_G = \{ (a, ab) : a \in R, b \in S\}$. Cayleyn graafin konstruktion nojalla on selvää, että on olemassa bijektio $\alpha: R \rightarrow V_G$. Merkitään $v_a = \alpha(a)$.
+Olkoon $G$ suunnattu ja väritetty graafi, jonka solmut vastaavat ryhmän $R$ alkioita bijektion $\alpha: R \rightarrow V_G$ avulla. Merkitään $v_a = \alpha(a)$. Graafin suunnatut kaaret ovat $E_G = \{ (a, ab) : a \in R, b \in S\}$. Annetun kaaren $(a, ab)$ väri on $\lambda(b)$.
 
 Määritellään ryhmän $R$ mielivaltaisia alkioita $a$ vastaavat kuvaukset $f_a: G \rightarrow G, f_a(v_b) = v_{ab}$.
 
@@ -459,7 +460,7 @@ Kuvaus $f_a$ on automorfismi, sillä
 \begin{center}
 \begin{tabular}{r l}
 $uv \in E_G$ & $\Leftrightarrow \exists b \in S: \alpha^{-1}(u) = \alpha^{-1}(v)b$ \\
-& $\Leftrightarrow \exists b \in R: a\alpha^{-1}(u) = a\alpha^{-1}(v)b$ \\
+& $\Leftrightarrow \exists b \in S: a\alpha^{-1}(u) = a\alpha^{-1}(v)b$ \\
 & $\Leftrightarrow f_a(u)f_a(v) \in E_G$\\
 \end{tabular}
 \end{center}
@@ -512,13 +513,13 @@ Korvataan graafin väritetyt ja suunnatut kaaret aligraafeilla, jotka ovat epäs
     (B6) edge node[left] {} (R);
 \end{tikzpicture}
 \end{center}
-missä jokainen väri korvataan $n$ solmun ketjun sisältävällä aligraafilla, jossa $n$ vastaa värin numerointia. Aligraafin ylemmän komponentin orientaatio vastaa alkuperäisen kaaren suuntaa. Näin saadaan suuntaamaton, väritön graafi $G'$. Huomataan että aligraafityypit eivät ole keskenään isomorfismisia, sillä jokainen sisältää eri määrän solmuja. Jokainen aligraafi sisältää täsmälleen yhden 5-syklin, joka on epäsymmetrisesti kiinnitetty aligraafiin. Muut aligraafin solmut määräytyvät 5-syklin mukaan. Graafi ei sisällä muita 5-syklejä, sillä jokainen muu sykli sisältää vähintään 6 solmua. Tästä seuraa se, että $Aut(G) \simeq Aut(G')$.
+missä jokainen väri korvataan $n$ solmun ketjun sisältävällä aligraafilla, jossa $n$ vastaa värin numerointia. Aligraafin ylemmän komponentin orientaatio vastaa alkuperäisen kaaren suuntaa. Näin saadaan suuntaamaton, väritön graafi $G'$. Huomataan, että aligraafityypit eivät ole keskenään isomorfismisia, sillä jokainen sisältää eri määrän solmuja. Jokainen aligraafi sisältää täsmälleen yhden 5-syklin, joka on epäsymmetrisesti kiinnitetty aligraafiin. Muut aligraafin solmut määräytyvät 5-syklin mukaan. Graafi ei sisällä muita 5-syklejä, sillä jokainen muu sykli sisältää vähintään 6 solmua. Tästä seuraa se, että $Aut(G) \simeq Aut(G')$.
 \end{proof}
 \end{teor}
 
 
 \section{Lähteet}
-László Babai: Automorphism groups, isomorphism, reconstruction, Budapest, 1994.\\
+Robert Frucht, Herstellung von Graphen mit vorgegebener abstrakter Gruppe, 1938.\\
 Tero Harju: Lecture Notes on Graph Theory, Turku, Suomi, 2007.\\
 Markku Koppinen: Ryhmäteoria, Turku, Suomi, 2007.\\
 \end{document}
